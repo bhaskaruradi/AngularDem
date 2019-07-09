@@ -1,0 +1,51 @@
+<table class="table table-bordered ">
+  <tr>
+      <td>Index</td>
+      <td><button (click) = "idSort()" class="btn btn-primary">ID</button></td>
+      <td><button (click) = "titleSort()" class="btn btn-primary">title</button></td>
+      <td><button (click) = "yearSort()" class="btn btn-primary">year</button></td>
+      <td><button (click) = "authorSort()" class="btn btn-primary">author</button></td>
+
+  </tr>
+<tr *ngFor = "let book of books,let i = index">
+  <td>{{i+1}}</td>
+  <td>{{book.id}}</td>
+  <td>{{book.title}}</td>
+  <td>{{book.year}}</td>
+  <td>{{book.author}}</td>
+  <td><button (click) = deleteBook(i) class="btn btn-danger">DELETE</button></td>
+  <td><button (click) = updateBook(i) class="btn btn-warning">Update</button></td>
+
+
+
+</tr>
+
+
+
+</table>
+
+<form #addBook = "ngForm" (ngSubmit) = add(addBook.value)>
+
+  New ID: <input type="number" name="id" ngModel> <br>
+  New title: <input type="text" name="title" ngModel> <br>
+  New year: <input type="number" name="year" ngModel> <br>
+  New author: <input type="text" name="author" ngModel> <br>
+  <button type="submit" class="btn btn-success">ADD BOOK</button>
+
+
+
+
+
+</form>
+<div *ngIf = "isClicked">
+<form #upBook = "ngForm" (ngSubmit) = update(upBook.value)>
+    New title: <input type="text" name="title" ngModel = "{{book.title}}"> <br>
+    New year: <input type="number" name="year" ngModel  = "{{book.year}}"> <br>
+    New author: <input type="text" name="author" ngModel  = "{{book.author}}"> <br>
+    <button type="submit" class="btn btn-success">UPDATE</button>
+  
+  
+  
+  
+  </form></div>
+  

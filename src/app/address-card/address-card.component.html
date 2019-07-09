@@ -1,0 +1,29 @@
+<!-- <div class="address-card">
+<h1 class="name">{{user.name}}</h1>
+<h1 class = "title">{{user.title}}</h1>
+<button *ngIf = "isCollapsed" (click) = "getCollapsed()" >Expand</button>
+<button *ngIf = "!isCollapsed" (click) = "getCollapsed()" >Collapse</button>
+<div *ngIf = "!isCollapsed">
+<div class="phone" *ngIf = "user.phone.length >0">
+  <p >phone:</p>
+
+    <h2 *ngFor = "let phoneNumber of user.phone">{{phoneNumber}}</h2>
+  </div>
+</div>
+</div> -->
+
+<!-- <input type="text" [(ngModel)] = "inputText">
+{{inputText}} -->
+
+
+User name:<input type="text" [(ngModel)] = "userName">
+<button (click) = "submit()">FETCH USER</button>
+
+<div *ngIf = "isFetched">
+<p>login name:{{httpResponse.login}}</p>
+<p>following:{{httpResponse.following}}</p>
+<h1>id: {{httpResponse.id}}</h1>
+
+<h1>no of repos: {{httpResponse.public_repos}}</h1>
+</div>
+

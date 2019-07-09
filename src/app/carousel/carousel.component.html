@@ -1,0 +1,49 @@
+<head>
+    <style>
+       /* Make the image fully responsive */
+
+       .carousel-inner img {
+           width: 100%;
+           height: 60%;
+       }
+   </style>
+</head>
+<h1>Carousel</h1>
+<div id="caro" class="carousel slide" data-ride="carousel">
+
+
+   <!-- The slideshow -->
+   <div class="carousel-inner">
+       <div class="carousel-item active">
+           <img src="..\assets\joker.jpg" alt="Los Angeles">
+           <div class="carousel-caption">
+               <h3 style="color: black">JOKER</h3>
+           </div>
+       </div>
+       <div class="carousel-item">
+           <img src="..\assets\nature.jpg" alt="Chicago">
+           <div class="carousel-caption">
+               <h3>Nature.....!</h3>
+           </div>
+       </div>
+       <div class="carousel-item">
+           <img src="..\assets\marvel.png" alt="New York">
+       </div>
+   </div>
+
+   <!-- Left and right controls -->
+   <a class="carousel-control-prev" href="#caro" data-slide="prev">
+       <span class="carousel-control-prev-icon"></span>
+   </a>
+   <a class="carousel-control-next" href="#caro" data-slide="next">
+       <span class="carousel-control-next-icon"></span>
+   </a>
+
+   <!-- Indicators -->
+   <ul class="carousel-indicators">
+       <li data-slide-to="0" class="active"></li>
+       <li data-slide-to="1"></li>
+       <li data-slide-to="2"></li>
+   </ul>
+
+</div>

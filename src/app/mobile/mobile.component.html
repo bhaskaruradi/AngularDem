@@ -1,0 +1,18 @@
+<table class="table table-bordered ">
+  <tr>
+      <td>Index</td>
+      <td><a (click) = "idSort()">ID</a></td>
+      <td><a (click) = "productSort()" >ProductCategory</a></td>
+      <td><a (click) = "nameSort()" >Product Name</a></td>
+      <td><a (click) = "priceSort()">Price</a></td>
+      <td><a (click) = "quantitySort()" >Quantity</a></td>
+
+  </tr>
+<tr *ngFor = "let product of products,let i = index">
+  <td>{{i+1}}</td>
+  <td>{{product.id}}</td>
+  <td>{{product.productCategories}}</td>
+  <td>{{product.productName}}</td>
+  <td>{{product.price | currency:'INR'}}</td>
+  <td>{{product.quantity}}</td>
+  <td><button (click) = deleteBook(i) class="btn btn-danger">DELETE</button></td>

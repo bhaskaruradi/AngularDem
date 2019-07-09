@@ -1,0 +1,48 @@
+<!-- <h1>{{message}}</h1>
+<h1>{{display()}}</h1>
+
+<img [src]="path" >
+
+<button (click) = "butonEvent()">CLICK ME</button>
+
+<input type="number" [(ngModel)] = "num1">
+<input type="number" [(ngModel)] = "num2">
+
+<button (click) = "show(num1,num2)">CLICK ME</button>
+ -->
+
+<!-- 
+<button *ngIf = "!isLoggedIn">LOGIN</button>
+<button *ngIf = "isLoggedIn">LOGOUT</button>
+
+
+<ul>
+
+
+    <li *ngFor = "let college of colleges">{{college}}</li>
+</ul>
+
+
+<div *ngFor = "let car of cars">
+    <h1>{{car.name}}</h1>
+    <h1>{{car.color}}</h1>
+    <h1>{{car.speed}}</h1>
+</div>
+
+
+<input [(ngModel)] = "menu"  >
+<div [ngSwitch] = "menu" >
+
+<h1 *ngSwitchCase = "1">Bhaskar</h1>
+<h1 *ngSwitchCase = "2">Akshitha</h1>
+<h1 *ngSwitchCase = "3">Sowjanya</h1>
+<h1 *ngSwitchCase = "4">Krishna Chaitanya</h1>
+</div> -->
+<div *ngFor = "let student of students" style="background-color: chartreuse">
+        <h1>{{student.name | custom:student.gender}}</h1>
+        <h1>{{student.rollno |currency:'INR'}}</h1>
+        <h1>{{student.college}}</h1>
+        <!-- <h1>{{student.gender}}</h1> -->
+    </div>
+    
+ 
